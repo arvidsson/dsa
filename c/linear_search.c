@@ -21,8 +21,13 @@ int main(int argc, char **argv)
 {
     println("Running tests...");
 
-    assert(linear_search(1, (int[]){1, 2, 3, 4, 5}, 5) == 1);
-    assert(linear_search(1, (int[]){}, 0) == 0);
+    int array[] = {1, 2, 3, 4, 5};
+    int length = lengthof(array);
+    int empty_array[] = {};
+
+    assert(linear_search(1, array, length) == 1);
+    assert(linear_search(10, array, length) == 0);
+    assert(linear_search(1, empty_array, 0) == 0);
 
     println("All tests passed!");
 }
