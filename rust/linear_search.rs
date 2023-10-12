@@ -9,6 +9,8 @@ struct Cli {
 }
 
 fn linear_search(array: &[i32], item: i32) -> bool {
+    println!("Searching for {} in {:?}", item, array);
+
     for n in array {
         if *n == item {
             return true;
