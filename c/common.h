@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
+#define lengthof(array) (sizeof((array)) / sizeof((array)[0]))
 #define println(format, ...) printf(format "\n", ##__VA_ARGS__)
 
 void print_array(int array[], int length)
