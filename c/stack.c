@@ -10,7 +10,6 @@ typedef struct Stack
 {
     int length;
     Node *head;
-    // Node *tail;
 } Stack;
 
 void print_stack(Stack *s)
@@ -34,7 +33,6 @@ Stack *new_stack()
     Stack *s = (Stack *)malloc(sizeof(Stack));
     s->length = 0;
     s->head = NULL;
-    // s->tail = NULL;
     return s;
 }
 
@@ -72,12 +70,11 @@ void push(Stack *s, int value)
 
     if (s->head == NULL)
     {
-        s->head = node; // =  s->tail =
+        s->head = node;
         print_stack(s);
         return;
     }
 
-    // push value to head
     Node *head = s->head;
     s->head = node;
     s->head->next = head;
